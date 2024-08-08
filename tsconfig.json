@@ -1,12 +1,20 @@
 {
-  "compilerOptions": {
-    "rootDirs": ["src"],
-    "outDir": "dist",
-    "lib": ["es2020"],
-    "target": "es2020",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "types": ["node"]
+    "compilerOptions": {
+      "rootDir": "src",                 // Ensures that TypeScript knows the root directory of the source files.
+      "outDir": "dist",
+      "lib": ["es2020"],
+      "target": "es2020",
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "resolveJsonModule": true,         // Allows importing JSON files.
+      "types": ["node"],
+      "baseUrl": ".",                    // Optional: Helps with absolute imports.
+      "paths": {
+        "*": ["node_modules/*"]          // Optional: Resolves modules from node_modules.
+      }
+    },
+    "include": ["src/**/*"],              // Includes all TypeScript files in the src directory.
+    "exclude": ["node_modules", "dist"]  // Excludes node_modules and dist directories from compilation.
   }
-}
+  

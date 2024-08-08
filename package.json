@@ -5,18 +5,17 @@
   "main": "index.js",
   "scripts": {
     "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "start": "npm run compile && nodemon ./dist/index.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "typescript": "^5.5.4"
+  },
   "dependencies": {
     "@apollo/server": "^4.10.5",
     "graphql": "^16.9.0"
   },
-  "devDependencies": {
-    "@types/node": "^22.1.0",
-    "typescript": "^5.5.4"
-  }
+  "type": "commonjs"
 }
