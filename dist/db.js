@@ -24,21 +24,21 @@ exports.db = {
         },
         {
             id: "2",
-            rating: 8,
+            rating: 9,
             content: "Lorem ipsum sit amet, ",
             author_id: "3",
             game_id: "5",
         },
         {
             id: "3",
-            rating: 8,
+            rating: 10,
             content: "Lorem ipsum sit amet, ",
             author_id: "2",
             game_id: "1",
         },
         {
             id: "4",
-            rating: 8,
+            rating: 4,
             content: "Lorem ipsum sit amet, ",
             author_id: "1",
             game_id: "3",
@@ -52,7 +52,7 @@ exports.db = {
         },
         {
             id: "6",
-            rating: 8,
+            rating: 9,
             content: "Lorem ipsum sit amet, ",
             author_id: "2",
             game_id: "4",
@@ -66,7 +66,7 @@ exports.db = {
         },
         {
             id: "8",
-            rating: 8,
+            rating: 3,
             content: "Lorem ipsum sit amet, ",
             author_id: "1",
             game_id: "2",
