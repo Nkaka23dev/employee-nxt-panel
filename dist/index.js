@@ -43,6 +43,28 @@ const resolvers = {
             return db_1.db.games.find((game) => game.id === parent.game_id);
         },
     },
+    Mutation: {
+        deleteGame(_, args) {
+            return db_1.db.games.filter((game) => game.id !== args.id);
+        },
+        addGame(_, args) {
+            let game = {
+                ...args.game,
+                id: Math.floor(Math.random() * 1000).toString(),
+            };
+            db_1.db.games.push(game);
+            return game;
+        },
+        updateGame(_, args) {
+            db_1.db.games = db_1.db.games.map((game) => {
+                if (game.id === args.id) {
+                    return { ...game, ...args.game };
+                }
+                return game;
+            });
+            return db_1.db.games.find((game) => game.id === args.id);
+        },
+    },
 };
 const server = new server_1.ApolloServer({
     typeDefs: schema_1.typeDefs,
